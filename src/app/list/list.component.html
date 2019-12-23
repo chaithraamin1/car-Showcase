@@ -1,0 +1,19 @@
+<div *ngFor="let pro of product">
+  <div class="container" style="width:80%">
+     
+ <div class="card" style="width:300px;float:left;margin-left:20px;margin-top: 20px " >
+    
+       <img class="card-img-top" [src]="pro.image" (click)="onClick(pro.id)" style="width:300px;width: 297px;height: 169px;">
+       <div class="card-body">
+       <h2 class="card-title">{{pro.name}}</h2>
+         
+           <div class="price"><b>{{pro.price|currency}}</b></div>  
+      
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" (click)="onClick(pro.id)">More Details</button>
+
+       </div>
+  
+    </div>
+    </div>
+  </div>
+  

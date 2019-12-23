@@ -1,0 +1,33 @@
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+a:not([href]):not([tabindex]) {
+    /* color: inherit; */
+    text-decoration: none;
+}
+.btn-primary[_ngcontent-vex-c1] {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    margin-left: 20px;
+    // margin-top: 4px;
+}
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    margin-top: 32px;
+}
+.container {
+    width:80%;
+    padding-right: 15px;
+    padding-left: 15px;
+    /* margin-right: auto; */
+    /* margin-left: auto; */
+    padding-bottom: x;
+}

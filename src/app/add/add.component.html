@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="panel-group">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <div class="form-group">
+
+          <label for="title"><b>Name:</b></label><br />
+          <input type="text" class="form-control" [(ngModel)]="product.name" id="name" required
+            #title="ngModel"><br /><br />
+          <div *ngIf="title.errors && (title.invalid|| title.touched)" class="alert alert-danger">
+            <div [hidden]="!title.errors.required">
+              Name is required!
+            </div>
+          </div>
+          <label for="model"><b>Model:</b></label><br />
+          <input type="text" class="form-control" [(ngModel)]="product.model" required pattern="banana"
+            #model="ngModel"><br /><br />
+
+          <div *ngIf="model.errors && (model.invalid|| model.touched)" class="alert alert-danger">
+            <div [hidden]="!model.errors.required">
+
+              model is required!
+            </div>
+          </div>
+
+          <label for="price"><b>Price</b></label>
+          <input type="text" class="form-control" [(ngModel)]="product.price" required #price="ngModel"><br /><br />
+          <!-- <label for="price"><b>Price:</b></label><br /> -->
+          <div *ngIf="price.errors && (price.invalid||price.touched)" class="alert alert-danger">
+            <div [hidden]="!model.errors.required">
+              price is required!
+            </div>
+          </div>
+
+          <label><b>Image:</b></label><br />
+          <!-- <img [src]="imgurl" > -->
+          <input type="file" class="form-control-file" id="img" name="image" [(ngModel)]="product.image"
+            (change)="handlefileinput($event.target.files)"><br /><br />
+
+          <label><b>Brand</b></label><br />
+
+          <select class="form-control" id="department" name="department" [(ngModel)]="product.brandid">
+            <option value="1">Maruti</option>
+            <option value="2">Honda</option>
+            <option value="3">Ford</option>
+            <option value="4">Hyundai</option>
+            <option value="5">BMW</option>
+            <option value="6">Tata</option>
+          </select><br /><br />
+          <label for="desc"><b>Description:</b></label><br />
+          <input type="text" class="form-control" [(ngModel)]="product.Desc" required #desc="ngModel"><br /><br />
+          <div *ngIf="desc.errors && (desc.invalid|| desc.touched)" class="alert alert-danger">
+            <div [hidden]="!desc.errors.required">
+              description is required!
+            </div>
+          </div>
+          <button type="submit" id="save" class="btn btn-primary" (click)="saveProduct()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
